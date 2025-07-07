@@ -1,0 +1,329 @@
+
+/*.filter-loader {*/
+  /*position: fixed;*/
+  /*background: rgba(255, 255, 255, 0.9);*/
+  /*z-index: 999;*/
+  /*left: 0;*/
+  /*top: 0;*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*display: none;*/
+  /*text-align: center;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*font-size: 45px;*/
+  /*color: #89bc40;*/
+/*}*/
+
+
+div#itlItemFilter {
+  position: relative;
+  min-height: 300px;
+}
+.filter-loader {
+  position: absolute;
+  background: rgba(255, 255, 255, 1);
+  z-index: 999;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  color: #89bc40;
+  padding-top: 0%;
+}
+
+.filter-loader.active {
+  display: block;
+}
+
+/*******Select Fields Style**********/
+
+#itlItemFilter nav.top_menu a:hover {
+  text-decoration: none;
+}
+
+#itlItemFilter ul#menu-main {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+#itlItemFilter li.menu-item {
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#itlItemFilter nav.top_menu > ul > li > a {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  transition: all 300ms cubic-bezier(0.5, 0, 0.5, 1);
+  position: relative;
+  color: #060075;
+  padding: 8px 13px 11px 13px;
+  display: inline-block;
+  text-transform: uppercase;
+  z-index: -1;
+  text-decoration: none;
+  width: 100%;
+}
+
+#itlItemFilter nav.top_menu > ul > li.menu-item > a:before {
+  font-size: 14px;
+  content: '\f107';
+  margin: 0 0 0 7px;
+  float: right;
+  font-family: 'Font Awesome 6 Pro';
+}
+
+#itlItemFilter .clear-filter-btn:before {
+  display: none;
+}
+
+.clear-filter-btn {
+  text-align: center;
+}
+
+#itlItemFilter nav.top_menu > ul > li:hover a.clear-filter-btn {
+  color: #fff;
+  background-color: #060075;
+  transition: all 0.5s ease;
+}
+
+a.clear-filter-btn {
+  min-width: 180px;
+  border: 1px solid #060075;
+  border-radius: 4px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  color: #060075;
+}
+
+a.clear-filter-btn:hover {
+  color: #fff;
+  background-color: #060075;
+  transition: all 0.5s ease;
+}
+
+#itlItemFilter li.menu-item .sub-menu {
+  margin: 0;
+  list-style: none;
+  transform: translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background: #fff;
+  position: absolute;
+  z-index: 9999999;
+  width: max-content;
+  min-width: 100%;
+  box-shadow: 0 20px 40px -5px rgba(9, 30, 66, 1.8);
+  backface-visibility: hidden;
+  left: -999999px;
+}
+
+#itlItemFilter nav.top_menu ul.sub-menu {
+  padding: 12px 0;
+}
+
+#itlItemFilter nav.top_menu ul li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#itlItemFilter nav.top_menu > ul > li + li {
+  margin-left: 10px;
+}
+
+#itlItemFilter nav.top_menu > ul > li {
+  border: 1px solid #060075;
+  border-radius: 4px;
+  min-width: 180px;
+  width: 25%;
+}
+
+#itlItemFilter nav.top_menu ul.sub-menu > li label {
+  cursor: pointer;
+}
+
+#itlItemFilter nav.top_menu ul.sub-menu > li > a {
+  text-transform: none;
+  font-size: 15px;
+  line-height: 22px;
+  color: #111 !important;
+  display: block;
+  padding: 10px 25px;
+  font-weight: 400;
+}
+
+#itlItemFilter #menu-main li.menu-item.active .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  left: 0;
+  top: 104%;
+}
+
+#itlItemFilter #menu-main li.menu-item.active:last-child .sub-menu {
+  /*left: -160%;*/
+  left: -58%;
+  width: max-content;
+}
+
+#itlItemFilter nav.top_menu > ul:not(.off-canvas) li:not(.rh-megamenu) ul.sub-menu > li > a:hover {
+  background: #F9F9F9;
+}
+
+#itlItemFilter ul.sub-menu li .custom-checkbox {
+  margin: 10px 25px;
+  margin-left: 10px;
+}
+
+#itlItemFilter li.menu-item ul.sub-menu {
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+#itlItemFilter li.menu-item ul.sub-menu::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+#itlItemFilter li.menu-item ul.sub-menu::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+#itlItemFilter li.menu-item ul.sub-menu::-webkit-scrollbar-thumb {
+  background-color: #060075 !important;
+  outline: 1px solid #060075;
+  border-radius: 20px;
+}
+
+/*Pagination Start*/
+#itlItemFilter .vue-pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  width: 100%;
+}
+
+#itlItemFilter .vue-pagination span {
+  background: transparent;
+  padding: 6px 20px;
+  margin: 1px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#itlItemFilter .vue-pagination span:first-child,
+#itlItemFilter .vue-pagination span:last-child {
+  color: #060075;
+}
+
+#itlItemFilter .vue-pagination span.active {
+  background: #060075;
+  color: #fff;
+  border-radius: 0 0 20px 0;
+}
+
+.no-result h2 {
+  color: #060075;
+}
+
+.clinician-block img {
+  min-height: 347px;
+  max-height: 347px;
+  min-width: 231px;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 1024px) and (min-width: 320px) {
+  .item-result-list {
+    flex-direction: column;
+  }
+
+  .item-result-list li {
+    width: 100%;
+  }
+
+  .item-result-list li .item-card {
+    min-height: 1px;
+  }
+
+  .filter-fields-accordion > .card {
+    flex-direction: column;
+  }
+
+  .filter-fields-accordion > .card .accordion-wrapper {
+    width: 100%;
+  }
+
+  #itlItemFilter ul#menu-main {
+    flex-direction: column;
+  }
+
+  #itlItemFilter nav.top_menu > ul > li {
+    width: 100%;
+  }
+
+  #itlItemFilter nav.top_menu > ul > li + li {
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  a.clear-filter-btn {
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  .clinician-block .col-xs-12 {
+    padding: 0 !important;
+  }
+
+  .clinician-block .col-xs-12 {
+    padding: 0 !important;
+  }
+
+  .clinician-block a {
+    width: 100%;
+    display: block;
+  }
+  #itlItemFilter li.menu-item .sub-menu{
+    width: auto;
+    
+  }
+  .clinician-block img {
+    min-height: unset;
+    max-height: unset;
+    min-width: 100%;
+    object-fit: unset;
+    object-position: unset;
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+
+
+  #itlItemFilter nav.top_menu ul li {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
